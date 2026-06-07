@@ -62,8 +62,6 @@ Repositories I've contributed merged PRs to, refreshed daily by GitHub Actions.
 
 <a href="https://github.com/mohitkumhar/business-ai-agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/mohitkumhar-business-ai-agent.svg" alt="mohitkumhar/business-ai-agent" /></a> <sub><b>2</b> merged · latest: <a href="https://github.com/mohitkumhar/business-ai-agent/pull/756">#756</a></sub>
 
-<a href="https://github.com/Zbl1007/Creapiece/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/Zbl1007-Creapiece.svg" alt="Zbl1007/Creapiece" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/Zbl1007/Creapiece/pull/2">#2</a></sub>
-
 <a href="https://github.com/mohitkumhar/450-dsa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/mohitkumhar-450-dsa.svg" alt="mohitkumhar/450-dsa" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/mohitkumhar/450-dsa/pull/731">#731</a></sub>
 
 <!-- CONTRIBUTIONS:END -->
