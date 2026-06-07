@@ -23,6 +23,23 @@ const gh = (args) =>
 
 const ghJSON = (args) => JSON.parse(gh(args));
 
+// gh API call with retry — used for per-repo lookups that may flake.
+function ghJSONRetry(args, tries = 4) {
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    try {
+      return ghJSON(args);
+    } catch (e) {
+      lastErr = e;
+      // Linear backoff; gh CLI surfaces network errors via stderr+exit.
+      const ms = 500 * (i + 1);
+      const end = Date.now() + ms;
+      while (Date.now() < end) {} // intentional spin — keeps script sync
+    }
+  }
+  throw lastErr;
+}
+
 // ---------- palette ----------
 const C = {
   bg: "#ffffff",
@@ -73,27 +90,82 @@ function svg({ width, height, body }) {
 </svg>`;
 }
 
+// ---------- pixel cat sprite ----------
+// Pixel-art tabby cat holding a ledger labeled "STATS".
+// Color key:
+//   B = black outline      O = orange tabby       o = dark orange (stripes)
+//   W = eye highlight      P = pink (ears/nose)   C = book cover
+//   c = book page          T = book text          . = transparent
+const CAT_PIXELS = [
+  "..BB......BB..",
+  ".BPB......BPB.",
+  ".BOB......BOB.",
+  "BOOOBBBBBBOOOB",
+  "BOoOOOOOOOoOOB",
+  "BOOOBOOOOBOOOB",
+  "BOWBOOOOOOWBOB",
+  "BOOOOPPPPOOOOB",
+  "BOOOOoooooOOOB",
+  ".BOOOOOOOOOOB.",
+  "..BBBBBBBBBBB.",
+  "..BcccccccccB.",
+  "..BcTTTTTTTcB.",
+  "..BcccccccccB.",
+  "..BBBBBBBBBBB.",
+];
+const CAT_PALETTE = {
+  B: "#2a1810",
+  O: "#e89559",
+  o: "#c46f2c",
+  W: "#ffffff",
+  P: "#f4a5a5",
+  c: "#f5e6c8",
+  T: "#3a2818",
+  C: "#6b4423",
+};
+
+function renderCat({ x, y, scale }) {
+  let out = "";
+  for (let r = 0; r < CAT_PIXELS.length; r++) {
+    const row = CAT_PIXELS[r];
+    for (let c = 0; c < row.length; c++) {
+      const ch = row[c];
+      if (ch === ".") continue;
+      const fill = CAT_PALETTE[ch] || "#000";
+      out += `<rect x="${x + c * scale}" y="${y + r * scale}" width="${scale}" height="${scale}" fill="${fill}" />`;
+    }
+  }
+  return out;
+}
+
 // ---------- stats card ----------
 function statsCard({ user, repos, totalStars, totalForks, totalCommits, mergedPRs, contributedRepos }) {
   const rows = [
     ["Public repos",       repos.length],
     ["Stars earned",       totalStars],
     ["Forks",              totalForks],
-    ["Commits (own repos)", totalCommits],
+    ["Commits",            totalCommits],
     ["Merged PRs",         mergedPRs],
     ["Contributed to",     contributedRepos],
   ];
-  const W = 450, H = 195;
+  const W = 560, H = 210;
+  const catScale = 9;
+  const catW = 14 * catScale;            // 126
+  const catX = 18;
+  const catY = (H - 15 * catScale) / 2;   // vertical center
+  const statsX = catX + catW + 24;        // start of stats area
+  const colW = 195;
   const body = `
-    <text x="22" y="32" class="title">${esc(user.name || user.login)}'s GitHub Stats</text>
+    ${renderCat({ x: catX, y: catY, scale: catScale })}
+    <text x="${statsX}" y="32" class="title">${esc(user.name || user.login)}'s GitHub Stats</text>
     ${rows.map(([k, v], i) => {
       const col = i % 2;
       const row = Math.floor(i / 2);
-      const x = 22 + col * 215;
-      const y = 70 + row * 38;
+      const x = statsX + col * colW;
+      const y = 70 + row * 42;
       return `
         <text x="${x}" y="${y}" class="label">${esc(k)}</text>
-        <text x="${x + 200}" y="${y}" class="num" text-anchor="end">${v}</text>`;
+        <text x="${x + colW - 15}" y="${y}" class="num" text-anchor="end">${v}</text>`;
     }).join("")}`;
   return svg({ width: W, height: H, body });
 }
@@ -277,9 +349,10 @@ for (const { name, count, latest } of contributedRepoList) {
   const [owner, repo] = name.split("/");
   let meta;
   try {
-    meta = ghJSON(`api repos/${owner}/${repo}`);
-  } catch {
-    continue;
+    meta = ghJSONRetry(`api repos/${owner}/${repo}`);
+  } catch (e) {
+    console.error(`Failed to fetch ${name} after retries:`, e.message);
+    throw e; // fail loud — better than silently dropping the section
   }
   const file = `${owner}-${repo}.svg`;
   writeFileSync(
