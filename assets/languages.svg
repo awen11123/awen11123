@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="195" viewBox="0 0 400 195" role="img">
+  <style>
+    .title { font: 600 16px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; fill: #0969da; }
+    .desc  { font: 400 12px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; fill: #656d76; }
+    .label { font: 600 13px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; fill: #1f2328; }
+    .num   { font: 700 22px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; fill: #1f2328; }
+    .meta  { font: 400 12px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; fill: #656d76; }
+  </style>
+  <rect x="0.5" y="0.5" width="399" height="194" rx="6" ry="6"
+        fill="#ffffff" stroke="#d0d7de" />
+  
+      <text x="22" y="32" class="title">Most Used Languages</text>
+      <rect x="22" y="50" width="356" height="8" rx="4" ry="4" fill="#eaeef2" />
+      <rect x="22" y="50" width="342.9659826583643" height="8" fill="#F05138" /><rect x="364.9659826583643" y="50" width="7.0681376621058485" height="8" fill="#89e051" /><rect x="372.03412032047015" y="50" width="5.965879679529867" height="8" fill="#f1e05a" />
+      
+        <circle cx="28" cy="85" r="6" fill="#F05138" />
+        <text x="42" y="90" class="label">Swift</text>
+        <text x="192" y="90" class="meta" text-anchor="end">96.3%</text>
+        <circle cx="218" cy="85" r="6" fill="#89e051" />
+        <text x="232" y="90" class="label">Shell</text>
+        <text x="382" y="90" class="meta" text-anchor="end">2.0%</text>
+        <circle cx="28" cy="113" r="6" fill="#f1e05a" />
+        <text x="42" y="118" class="label">JavaScript</text>
+        <text x="192" y="118" class="meta" text-anchor="end">1.7%</text>
+</svg>
