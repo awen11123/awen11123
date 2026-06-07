@@ -20,7 +20,7 @@
         <text x="237" y="108" class="label">Commits (own repos)</text>
         <text x="437" y="108" class="num" text-anchor="end">19</text>
         <text x="22" y="146" class="label">Merged PRs</text>
-        <text x="222" y="146" class="num" text-anchor="end">7</text>
+        <text x="222" y="146" class="num" text-anchor="end">6</text>
         <text x="237" y="146" class="label">Contributed to</text>
-        <text x="437" y="146" class="num" text-anchor="end">4</text>
+        <text x="437" y="146" class="num" text-anchor="end">3</text>
 </svg>
