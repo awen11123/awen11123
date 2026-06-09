@@ -50,6 +50,14 @@ I like things that are **a little playful**, **a little useful**, and **work off
   <a href="https://github.com/awen11123/usage-pet"><img src="assets/repos/awen11123-usage-pet.svg" alt="usage-pet" /></a>
 </p>
 
+### 🐍 Watch a snake eat my contributions
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/awen11123/awen11123/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/awen11123/awen11123/output/snake.svg" />
+  <img alt="github contribution snake" src="https://raw.githubusercontent.com/awen11123/awen11123/output/snake.svg" />
+</picture>
+
 ### 🌱 Open Source Contributions
 
 Repositories I've contributed merged PRs to, refreshed daily by GitHub Actions.
