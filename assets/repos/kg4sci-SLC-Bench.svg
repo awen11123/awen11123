@@ -9,8 +9,8 @@
   <rect x="0.5" y="0.5" width="399" height="119" rx="6" ry="6"
         fill="#ffffff" stroke="#d0d7de" />
   
-      <text x="22" y="32" class="title">mohitkumhar / <tspan font-weight="700">business-ai-agent</tspan></text>
+      <text x="22" y="32" class="title">kg4sci / <tspan font-weight="700">SLC-Bench</tspan></text>
       <text x="22" y="60" class="desc"></text>
-      <circle cx="28" cy="92" r="6" fill="#fcb32c" />
-       <text x="40" y="96" class="meta">MDX</text><text x="140" y="96" class="meta">★ 78</text><text x="200" y="96" class="meta">⑂ 111</text>
+      <circle cx="28" cy="92" r="6" fill="#999999" />
+       <text x="40" y="96" class="meta">Cypher</text><text x="140" y="96" class="meta">★ 0</text><text x="200" y="96" class="meta">⑂ 0</text>
 </svg>
