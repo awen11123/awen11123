@@ -64,11 +64,9 @@ Repositories I've contributed merged PRs to, refreshed daily by GitHub Actions.
 
 <!-- CONTRIBUTIONS:START -->
 
-> Auto-generated daily. Last updated: 2026-06-10
+> Auto-generated daily. Last updated: 2026-06-11
 
 <a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>3</b> merged · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
-
-<a href="https://github.com/kg4sci/SLC-Bench/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/kg4sci-SLC-Bench.svg" alt="kg4sci/SLC-Bench" /></a> <sub><b>2</b> merged · latest: <a href="https://github.com/kg4sci/SLC-Bench/pull/2">#2</a></sub>
 
 <a href="https://github.com/mohitkumhar/business-ai-agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/mohitkumhar-business-ai-agent.svg" alt="mohitkumhar/business-ai-agent" /></a> <sub><b>2</b> merged · latest: <a href="https://github.com/mohitkumhar/business-ai-agent/pull/756">#756</a></sub>
 
