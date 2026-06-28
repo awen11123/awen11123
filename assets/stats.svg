@@ -21,7 +21,7 @@
         <text x="363" y="112" class="label">Commits</text>
         <text x="543" y="112" class="num" text-anchor="end">24</text>
         <text x="168" y="154" class="label">Merged PRs</text>
-        <text x="348" y="154" class="num" text-anchor="end">8</text>
+        <text x="348" y="154" class="num" text-anchor="end">9</text>
         <text x="363" y="154" class="label">Contributed to</text>
-        <text x="543" y="154" class="num" text-anchor="end">4</text>
+        <text x="543" y="154" class="num" text-anchor="end">5</text>
 </svg>

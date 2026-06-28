@@ -64,11 +64,13 @@ Repositories I've contributed merged PRs to, refreshed daily by GitHub Actions.
 
 <!-- CONTRIBUTIONS:START -->
 
-> Auto-generated daily. Last updated: 2026-06-27
+> Auto-generated daily. Last updated: 2026-06-28
 
 <a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>3</b> merged · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
 
 <a href="https://github.com/mohitkumhar/business-ai-agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/mohitkumhar-business-ai-agent.svg" alt="mohitkumhar/business-ai-agent" /></a> <sub><b>2</b> merged · latest: <a href="https://github.com/mohitkumhar/business-ai-agent/pull/756">#756</a></sub>
+
+<a href="https://github.com/Vexa-ai/vexa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/Vexa-ai-vexa.svg" alt="Vexa-ai/vexa" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/Vexa-ai/vexa/pull/460">#460</a></sub>
 
 <a href="https://github.com/ray-project/ray/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/ray-project-ray.svg" alt="ray-project/ray" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/ray-project/ray/pull/63872">#63872</a></sub>
 
