@@ -5,7 +5,7 @@
 
 ### Glad to see you here! 🐱
 
-I build small, useful things — mostly **macOS apps** and **AI tooling**. My latest is [usage-pet](https://github.com/awen11123/usage-pet), a pixel pet that lives on your desktop and shows how much of your Claude / Codex usage budget is left.
+I build small, useful things — mostly **macOS apps** and **AI tooling**. My latest is [usage-pet](https://github.com/awen11123/usage-pet), a pixel pet that lives on your desktop and shows how much of your Claude / Codex / relay-API budget is left — with a menu-bar readout and a `usagepet` CLI too, installable via Homebrew.
 
 I like things that are **a little playful**, **a little useful**, and **work offline**. Open source is how I learn, so you'll find me sending small PRs into projects I use.
 
