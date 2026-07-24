@@ -90,50 +90,51 @@ function svg({ width, height, body }) {
 </svg>`;
 }
 
-// ---------- pixel cat sprite ----------
-// Pixel-art tabby cat holding a ledger labeled "STATS".
-// Color key:
-//   B = black outline      O = orange tabby       o = dark orange (stripes)
-//   W = eye highlight      P = pink (ears/nose)   C = book cover
-//   c = book page          T = book text          . = transparent
-const CAT_PIXELS = [
-  "..BB......BB..",
-  ".BPB......BPB.",
-  ".BOB......BOB.",
-  "BOOOBBBBBBOOOB",
-  "BOoOOOOOOOoOOB",
-  "BOOOBOOOOBOOOB",
-  "BOWBOOOOOOWBOB",
-  "BOOOOPPPPOOOOB",
-  "BOOOOoooooOOOB",
-  ".BOOOOOOOOOOB.",
-  "..BBBBBBBBBBB.",
-  "..BcccccccccB.",
-  "..BcTTTTTTTcB.",
-  "..BcccccccccB.",
-  "..BBBBBBBBBBB.",
-];
-const CAT_PALETTE = {
-  B: "#2a1810",
-  O: "#e89559",
-  o: "#c46f2c",
-  W: "#ffffff",
-  P: "#f4a5a5",
-  c: "#f5e6c8",
-  T: "#3a2818",
-  C: "#6b4423",
+// ---------- pixel Westie sprite ----------
+// Pixel-art West Highland White Terrier: sitting, sunglasses on the forehead,
+// holding an open ledger. Ported rect-for-rect from westie.svg (a 22x24 grid,
+// variable-width runs) so the card sprite matches the source exactly.
+// Palette keys: B outline · W white fur · f fur shadow · P inner-ear ·
+//   G glasses frame · L lens · H lens shine · K nose/mouth ·
+//   C book cover · A book page · T book binding
+const DOG_PALETTE = {
+  B: "#3a352e", W: "#ffffff", f: "#e6e1d6", P: "#e0a58a",
+  G: "#17171d", L: "#3d4a57", H: "#5b6b7a", K: "#2b2b2b",
+  C: "#6b4f34", A: "#f5e6c8", T: "#4a3b2a",
 };
+// [col, row, runWidth, key] — one entry per <rect>, all height 1 in grid units.
+const DOG_RECTS = [
+  [6,0,1,"B"],[15,0,1,"B"],
+  [5,1,1,"B"],[6,1,1,"W"],[7,1,1,"B"],[14,1,1,"B"],[15,1,1,"W"],[16,1,1,"B"],
+  [5,2,1,"B"],[6,2,1,"P"],[7,2,1,"W"],[8,2,1,"B"],[13,2,1,"B"],[14,2,1,"W"],[15,2,1,"P"],[16,2,1,"B"],
+  [4,3,1,"B"],[5,3,12,"W"],[17,3,1,"B"],
+  [3,4,1,"B"],[4,4,14,"W"],[18,4,1,"B"],
+  [3,5,1,"B"],[4,5,1,"W"],[5,5,12,"G"],[17,5,1,"W"],[18,5,1,"B"],
+  [3,6,1,"B"],[4,6,1,"W"],[5,6,1,"G"],[6,6,1,"H"],[7,6,2,"L"],[9,6,1,"G"],[10,6,2,"G"],[12,6,1,"G"],[13,6,1,"H"],[14,6,2,"L"],[16,6,1,"G"],[17,6,1,"W"],[18,6,1,"B"],
+  [3,7,1,"B"],[4,7,1,"W"],[5,7,5,"G"],[10,7,2,"W"],[12,7,5,"G"],[17,7,1,"W"],[18,7,1,"B"],
+  [2,8,1,"B"],[3,8,15,"W"],[18,8,1,"B"],
+  [2,9,1,"B"],[3,9,15,"W"],[18,9,1,"B"],
+  [2,10,1,"B"],[3,10,6,"W"],[9,10,4,"K"],[13,10,5,"W"],[18,10,1,"B"],
+  [2,11,1,"B"],[3,11,6,"W"],[9,11,4,"K"],[13,11,5,"W"],[18,11,1,"B"],
+  [2,12,1,"B"],[3,12,15,"W"],[18,12,1,"B"],[10,12,2,"K"],[20,12,1,"B"],
+  [3,13,1,"B"],[4,13,13,"W"],[17,13,1,"B"],[9,13,1,"K"],[12,13,1,"K"],[19,13,1,"B"],[20,13,1,"W"],[21,13,1,"B"],
+  [5,14,1,"B"],[6,14,10,"W"],[16,14,1,"B"],[8,14,1,"f"],[19,14,1,"B"],[20,14,1,"W"],[21,14,1,"B"],
+  [4,15,1,"B"],[5,15,13,"W"],[18,15,1,"B"],[19,15,1,"B"],[20,15,1,"W"],[21,15,1,"B"],
+  [3,16,1,"B"],[4,16,13,"W"],[17,16,1,"f"],[18,16,1,"B"],[7,16,1,"f"],[13,16,1,"f"],[19,16,1,"B"],[20,16,1,"W"],[21,16,1,"B"],
+  [3,17,1,"B"],[4,17,13,"W"],[17,17,1,"f"],[18,17,1,"B"],[9,17,1,"f"],[11,17,1,"f"],[19,17,1,"B"],[20,17,1,"W"],[21,17,1,"B"],
+  [3,18,1,"B"],[4,18,13,"W"],[17,18,1,"f"],[18,18,1,"B"],
+  [3,19,1,"B"],[4,19,3,"W"],[7,19,8,"C"],[15,19,3,"W"],[18,19,1,"B"],
+  [3,20,1,"B"],[4,20,3,"W"],[7,20,1,"C"],[8,20,2,"A"],[10,20,2,"T"],[12,20,2,"A"],[14,20,1,"C"],[15,20,3,"W"],[18,20,1,"B"],
+  [3,21,1,"B"],[4,21,3,"W"],[7,21,1,"C"],[8,21,2,"A"],[10,21,2,"T"],[12,21,2,"A"],[14,21,1,"C"],[15,21,3,"W"],[18,21,1,"B"],
+  [3,22,1,"B"],[4,22,1,"W"],[5,22,1,"B"],[6,22,1,"W"],[7,22,8,"C"],[15,22,1,"W"],[16,22,1,"B"],[17,22,1,"W"],[18,22,1,"B"],
+  [4,23,3,"B"],[7,23,8,"C"],[15,23,3,"B"],
+];
 
-function renderCat({ x, y, scale }) {
+function renderDog({ x, y, scale }) {
   let out = "";
-  for (let r = 0; r < CAT_PIXELS.length; r++) {
-    const row = CAT_PIXELS[r];
-    for (let c = 0; c < row.length; c++) {
-      const ch = row[c];
-      if (ch === ".") continue;
-      const fill = CAT_PALETTE[ch] || "#000";
-      out += `<rect x="${x + c * scale}" y="${y + r * scale}" width="${scale}" height="${scale}" fill="${fill}" />`;
-    }
+  for (const [c, r, w, key] of DOG_RECTS) {
+    const fill = DOG_PALETTE[key] || "#000";
+    out += `<rect x="${x + c * scale}" y="${y + r * scale}" width="${w * scale}" height="${scale}" fill="${fill}" />`;
   }
   return out;
 }
@@ -149,14 +150,14 @@ function statsCard({ user, repos, totalStars, totalForks, totalCommits, mergedPR
     ["Contributed to",     contributedRepos],
   ];
   const W = 560, H = 210;
-  const catScale = 9;
-  const catW = 14 * catScale;            // 126
-  const catX = 18;
-  const catY = (H - 15 * catScale) / 2;   // vertical center
-  const statsX = catX + catW + 24;        // start of stats area
-  const colW = 195;
+  const dogScale = 8;
+  const dogW = 22 * dogScale;             // 176
+  const dogX = 14;
+  const dogY = (H - 24 * dogScale) / 2;   // vertical center (9)
+  const statsX = dogX + dogW + 22;        // start of stats area
+  const colW = 175;
   const body = `
-    ${renderCat({ x: catX, y: catY, scale: catScale })}
+    ${renderDog({ x: dogX, y: dogY, scale: dogScale })}
     <text x="${statsX}" y="32" class="title">${esc(user.name || user.login)}'s GitHub Stats</text>
     ${rows.map(([k, v], i) => {
       const col = i % 2;
