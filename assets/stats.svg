@@ -19,7 +19,7 @@
         <text x="212" y="112" class="label">Forks</text>
         <text x="372" y="112" class="num" text-anchor="end">0</text>
         <text x="387" y="112" class="label">Commits</text>
-        <text x="547" y="112" class="num" text-anchor="end">41</text>
+        <text x="547" y="112" class="num" text-anchor="end">42</text>
         <text x="212" y="154" class="label">Merged PRs</text>
         <text x="372" y="154" class="num" text-anchor="end">10</text>
         <text x="387" y="154" class="label">Contributed to</text>
