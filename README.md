@@ -3,7 +3,7 @@
 [![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)](https://github.com/awen11123)
 [![Profile views](https://komarev.com/ghpvc/?username=awen11123&label=Profile%20views&color=0e75b6&style=flat-square)](https://github.com/awen11123)
 
-### Glad to see you here! 🐱
+### Glad to see you here! 🐶
 
 I build small, useful things — mostly **macOS apps** and **AI tooling**. My latest is [usage-pet](https://github.com/awen11123/usage-pet), a pixel pet that lives on your desktop and shows how much of your Claude / Codex / relay-API budget is left — with a menu-bar readout and a `usagepet` CLI too, installable via Homebrew.
 
@@ -15,8 +15,8 @@ I like things that are **a little playful**, **a little useful**, and **work off
 
 - 🛠 &nbsp; Currently building with **Swift**, **TypeScript**, and **Python**
 - 🚀 &nbsp; Currently exploring **Claude Agent SDK** and **macOS menu-bar apps**
-- 🐱 &nbsp; Mascot: a pixel orange tabby (see the cards below 👇)
-- 👾 &nbsp; Fun fact: the cat on my stats card is hand-drawn pixel by pixel in SVG
+- 🐶 &nbsp; Mascot: a pixel West Highland White Terrier in shades, holding a ledger (see the cards below 👇)
+- 👾 &nbsp; Fun fact: the dog on my stats card is hand-drawn pixel by pixel in SVG
 - 📫 &nbsp; Reach me by opening an [issue here](https://github.com/awen11123/awen11123/issues)
 
 ### Languages and Tools:
@@ -64,7 +64,7 @@ Repositories I've contributed merged PRs to, refreshed daily by GitHub Actions.
 
 <!-- CONTRIBUTIONS:START -->
 
-> Auto-generated daily. Last updated: 2026-07-24
+> Auto-generated daily. Last updated: 2026-07-23
 
 <a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>3</b> merged · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
 
