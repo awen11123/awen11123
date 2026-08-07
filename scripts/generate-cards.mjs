@@ -6,7 +6,13 @@
 //   assets/repos/<o>-<r>.svg  - per-repo pin cards
 // And updates the "Open Source Contributions" block in README.md.
 
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import {
+  mkdirSync,
+  readFileSync,
+  readdirSync,
+  unlinkSync,
+  writeFileSync,
+} from "node:fs";
 import { execSync } from "node:child_process";
 
 const USERNAME = process.env.GH_USERNAME || "awen11123";
@@ -146,8 +152,8 @@ function statsCard({ user, repos, totalStars, totalForks, totalCommits, mergedPR
     ["Stars earned",       totalStars],
     ["Forks",              totalForks],
     ["Commits",            totalCommits],
-    ["Merged PRs",         mergedPRs],
-    ["Contributed to",     contributedRepos],
+    ["OSS merged PRs",     mergedPRs],
+    ["OSS projects",       contributedRepos],
   ];
   const W = 560, H = 210;
   const dogScale = 8;
@@ -212,22 +218,53 @@ function languagesCard(langs) {
 }
 
 // ---------- repo pin card ----------
-function repoCard({ owner, name, description, language, stars, forks }) {
-  const W = 400, H = 120;
-  const desc = (description || "").slice(0, 90);
+function wrapDescription(description, maxChars = 54, maxLines = 2) {
+  const words = String(description || "No description provided.")
+    .trim()
+    .split(/\s+/);
+  const lines = [];
+  let current = "";
+
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (candidate.length <= maxChars) {
+      current = candidate;
+      continue;
+    }
+    if (current) lines.push(current);
+    current = word;
+    if (lines.length === maxLines - 1) break;
+  }
+  if (current && lines.length < maxLines) lines.push(current);
+
+  const consumed = lines.join(" ").length;
+  if (consumed < String(description || "").trim().length && lines.length) {
+    lines[lines.length - 1] = `${lines[lines.length - 1].slice(0, maxChars - 1)}…`;
+  }
+  return lines;
+}
+
+function repoCard({ owner, name, description, language, stars, forks, mergedPRs }) {
+  const W = 420, H = mergedPRs ? 154 : 132;
+  const descLines = wrapDescription(description);
+  const metaY = H - 22;
   const langDot = language
-    ? `<circle cx="28" cy="92" r="6" fill="${langColor(language)}" />
-       <text x="40" y="96" class="meta">${esc(language)}</text>`
+    ? `<circle cx="28" cy="${metaY - 4}" r="6" fill="${langColor(language)}" />
+       <text x="40" y="${metaY}" class="meta">${esc(language)}</text>`
     : "";
-  const starIcon = `<text x="${language ? 140 : 28}" y="96" class="meta">★ ${stars}</text>`;
-  const forkIcon = `<text x="${language ? 200 : 88}" y="96" class="meta">⑂ ${forks}</text>`;
+  const starIcon = `<text x="${language ? 170 : 28}" y="${metaY}" class="meta">★ ${stars.toLocaleString("en-US")}</text>`;
+  const forkIcon = `<text x="${language ? 255 : 113}" y="${metaY}" class="meta">⑂ ${forks.toLocaleString("en-US")}</text>`;
+  const contribution = mergedPRs
+    ? `<text x="22" y="108" class="label" fill="${C.accent}">✓ Contributor</text>
+       <text x="132" y="108" class="meta">${mergedPRs} merged pull request${mergedPRs === 1 ? "" : "s"}</text>`
+    : "";
   return svg({
     width: W,
     height: H,
     body: `
       <text x="22" y="32" class="title">${esc(owner)} / <tspan font-weight="700">${esc(name)}</tspan></text>
-      <text x="22" y="60" class="desc">${esc(desc)}</text>
-      ${langDot}${starIcon}${forkIcon}`,
+      ${descLines.map((line, i) => `<text x="22" y="${60 + i * 18}" class="desc">${esc(line)}</text>`).join("\n      ")}
+      ${contribution ? `${contribution}\n      ` : ""}${langDot}${starIcon}${forkIcon}`,
   });
 }
 
@@ -281,7 +318,7 @@ for (const r of ownRepos) {
 
 console.log("Fetching merged PRs...");
 const prs = ghJSON(
-  `search prs --author ${USERNAME} --merged --limit 200 ` +
+  `search prs --author ${USERNAME} --merged --limit 1000 ` +
     `--json repository,title,url,number,updatedAt`,
 );
 const external = prs.filter(
@@ -305,6 +342,26 @@ const contributedRepoList = [...byRepo.entries()]
       b.count - a.count || b.latest.updatedAt.localeCompare(a.latest.updatedAt),
   );
 
+console.log("Filtering to public repositories...");
+const publicContributions = [];
+for (const contribution of contributedRepoList) {
+  const [owner, repo] = contribution.name.split("/");
+  let meta;
+  try {
+    meta = ghJSONRetry(`api repos/${owner}/${repo}`);
+  } catch (e) {
+    console.error(`Failed to fetch ${contribution.name} after retries:`, e.message);
+    throw e;
+  }
+  if (meta.private || meta.visibility !== "public") continue;
+  publicContributions.push({ ...contribution, owner, repo, meta });
+}
+
+const publicMergedPRs = publicContributions.reduce(
+  (total, contribution) => total + contribution.count,
+  0,
+);
+
 // ============================================================
 // Render
 // ============================================================
@@ -318,8 +375,8 @@ writeFileSync(
     totalStars,
     totalForks,
     totalCommits,
-    mergedPRs: prs.length,
-    contributedRepos: byRepo.size,
+    mergedPRs: publicMergedPRs,
+    contributedRepos: publicContributions.length,
   }),
 );
 
@@ -346,15 +403,7 @@ for (const name of FEATURED) {
 
 console.log("Rendering contribution cards...");
 const contribCardLinks = [];
-for (const { name, count, latest } of contributedRepoList) {
-  const [owner, repo] = name.split("/");
-  let meta;
-  try {
-    meta = ghJSONRetry(`api repos/${owner}/${repo}`);
-  } catch (e) {
-    console.error(`Failed to fetch ${name} after retries:`, e.message);
-    throw e; // fail loud — better than silently dropping the section
-  }
+for (const { owner, repo, count, latest, meta } of publicContributions) {
   const file = `${owner}-${repo}.svg`;
   writeFileSync(
     `${REPO_DIR}/${file}`,
@@ -365,9 +414,20 @@ for (const { name, count, latest } of contributedRepoList) {
       language: meta.language,
       stars: meta.stargazers_count,
       forks: meta.forks_count,
+      mergedPRs: count,
     }),
   );
   contribCardLinks.push({ owner, repo, file, count, latest });
+}
+
+const expectedRepoCards = new Set([
+  ...FEATURED.map((name) => `${USERNAME}-${name}.svg`),
+  ...contribCardLinks.map(({ file }) => file),
+]);
+for (const file of readdirSync(REPO_DIR)) {
+  if (file.endsWith(".svg") && !expectedRepoCards.has(file)) {
+    unlinkSync(`${REPO_DIR}/${file}`);
+  }
 }
 
 // ============================================================
@@ -377,16 +437,21 @@ for (const { name, count, latest } of contributedRepoList) {
 const cards = contribCardLinks
   .map(
     ({ owner, repo, file, count, latest }) =>
-      `<a href="https://github.com/${owner}/${repo}/pulls?q=is%3Apr+author%3A${USERNAME}+is%3Amerged">` +
+      `<a href="https://github.com/${owner}/${repo}">` +
       `<img src="assets/repos/${file}" alt="${owner}/${repo}" /></a> ` +
-      `<sub><b>${count}</b> merged · latest: ` +
+      `<sub><b>Contributor</b> · ` +
+      `<a href="https://github.com/${owner}/${repo}">Repository</a> · ` +
+      `<a href="https://github.com/${owner}/${repo}/pulls?q=is%3Apr+author%3A${USERNAME}+is%3Amerged">` +
+      `${count} merged PR${count === 1 ? "" : "s"}</a> · latest: ` +
       `<a href="${latest.url}">#${latest.number}</a></sub>`,
   )
   .join("\n\n");
 
 const block =
   `${START}\n\n` +
-  `> Auto-generated daily. Last updated: ${new Date().toISOString().slice(0, 10)}\n\n` +
+  `> Contributor to **${contribCardLinks.length} public repositories** through ` +
+  `**${publicMergedPRs} merged pull requests**. Auto-generated daily · ` +
+  `Last updated: ${new Date().toISOString().slice(0, 10)}\n\n` +
   (cards || "_No external contributions yet._") +
   `\n\n${END}`;
 

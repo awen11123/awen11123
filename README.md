@@ -60,23 +60,23 @@ I like things that are **a little playful**, **a little useful**, and **work off
 
 ### 🌱 Open Source Contributions
 
-Repositories I've contributed merged PRs to, refreshed daily by GitHub Actions.
+Public repositories where my pull requests have been merged, refreshed daily by GitHub Actions.
 
 <!-- CONTRIBUTIONS:START -->
 
-> Auto-generated daily. Last updated: 2026-08-07
+> Contributor to **6 public repositories** through **9 merged pull requests**. Auto-generated daily · Last updated: 2026-08-07
 
-<a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>3</b> merged · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
+<a href="https://github.com/NianJiuZst/openmeta-cli"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>Contributor</b> · <a href="https://github.com/NianJiuZst/openmeta-cli">Repository</a> · <a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">3 merged PRs</a> · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
 
-<a href="https://github.com/mohitkumhar/business-ai-agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/mohitkumhar-business-ai-agent.svg" alt="mohitkumhar/business-ai-agent" /></a> <sub><b>2</b> merged · latest: <a href="https://github.com/mohitkumhar/business-ai-agent/pull/756">#756</a></sub>
+<a href="https://github.com/mohitkumhar/business-ai-agent"><img src="assets/repos/mohitkumhar-business-ai-agent.svg" alt="mohitkumhar/business-ai-agent" /></a> <sub><b>Contributor</b> · <a href="https://github.com/mohitkumhar/business-ai-agent">Repository</a> · <a href="https://github.com/mohitkumhar/business-ai-agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">2 merged PRs</a> · latest: <a href="https://github.com/mohitkumhar/business-ai-agent/pull/756">#756</a></sub>
 
-<a href="https://github.com/zxyasfas/paper_format_agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/zxyasfas-paper_format_agent.svg" alt="zxyasfas/paper_format_agent" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/zxyasfas/paper_format_agent/pull/19">#19</a></sub>
+<a href="https://github.com/zxyasfas/paper_format_agent"><img src="assets/repos/zxyasfas-paper_format_agent.svg" alt="zxyasfas/paper_format_agent" /></a> <sub><b>Contributor</b> · <a href="https://github.com/zxyasfas/paper_format_agent">Repository</a> · <a href="https://github.com/zxyasfas/paper_format_agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/zxyasfas/paper_format_agent/pull/19">#19</a></sub>
 
-<a href="https://github.com/Vexa-ai/vexa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/Vexa-ai-vexa.svg" alt="Vexa-ai/vexa" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/Vexa-ai/vexa/pull/460">#460</a></sub>
+<a href="https://github.com/Vexa-ai/vexa"><img src="assets/repos/Vexa-ai-vexa.svg" alt="Vexa-ai/vexa" /></a> <sub><b>Contributor</b> · <a href="https://github.com/Vexa-ai/vexa">Repository</a> · <a href="https://github.com/Vexa-ai/vexa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/Vexa-ai/vexa/pull/460">#460</a></sub>
 
-<a href="https://github.com/ray-project/ray/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/ray-project-ray.svg" alt="ray-project/ray" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/ray-project/ray/pull/63872">#63872</a></sub>
+<a href="https://github.com/ray-project/ray"><img src="assets/repos/ray-project-ray.svg" alt="ray-project/ray" /></a> <sub><b>Contributor</b> · <a href="https://github.com/ray-project/ray">Repository</a> · <a href="https://github.com/ray-project/ray/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/ray-project/ray/pull/63872">#63872</a></sub>
 
-<a href="https://github.com/mohitkumhar/450-dsa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged"><img src="assets/repos/mohitkumhar-450-dsa.svg" alt="mohitkumhar/450-dsa" /></a> <sub><b>1</b> merged · latest: <a href="https://github.com/mohitkumhar/450-dsa/pull/731">#731</a></sub>
+<a href="https://github.com/mohitkumhar/450-dsa"><img src="assets/repos/mohitkumhar-450-dsa.svg" alt="mohitkumhar/450-dsa" /></a> <sub><b>Contributor</b> · <a href="https://github.com/mohitkumhar/450-dsa">Repository</a> · <a href="https://github.com/mohitkumhar/450-dsa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/mohitkumhar/450-dsa/pull/731">#731</a></sub>
 
 <!-- CONTRIBUTIONS:END -->
 
