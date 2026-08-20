@@ -9,11 +9,10 @@
   <rect x="0.5" y="0.5" width="419" height="153" rx="6" ry="6"
         fill="#ffffff" stroke="#d0d7de" />
   
-      <text x="22" y="32" class="title">Vexa-ai / <tspan font-weight="700">vexa</tspan></text>
-      <text x="22" y="60" class="desc">Open-source meeting transcription API for Google Meet,</text>
-      <text x="22" y="78" class="desc">Microsoft…</text>
+      <text x="22" y="32" class="title">galaxyproject / <tspan font-weight="700">training-material</tspan></text>
+      <text x="22" y="60" class="desc">A collection of Galaxy-related training material</text>
       <text x="22" y="108" class="label" fill="#2da44e">✓ Contributor</text>
        <text x="132" y="108" class="meta">1 merged pull request</text>
-      <circle cx="28" cy="128" r="6" fill="#3572A5" />
-       <text x="40" y="132" class="meta">Python</text><text x="170" y="132" class="meta">★ 2,695</text><text x="255" y="132" class="meta">⑂ 433</text>
+      <circle cx="28" cy="128" r="6" fill="#e34c26" />
+       <text x="40" y="132" class="meta">HTML</text><text x="170" y="132" class="meta">★ 367</text><text x="255" y="132" class="meta">⑂ 1,089</text>
 </svg>

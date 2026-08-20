@@ -21,7 +21,7 @@
         <text x="387" y="112" class="label">Commits</text>
         <text x="547" y="112" class="num" text-anchor="end">63</text>
         <text x="212" y="154" class="label">OSS merged PRs</text>
-        <text x="372" y="154" class="num" text-anchor="end">9</text>
+        <text x="372" y="154" class="num" text-anchor="end">10</text>
         <text x="387" y="154" class="label">OSS projects</text>
-        <text x="547" y="154" class="num" text-anchor="end">6</text>
+        <text x="547" y="154" class="num" text-anchor="end">7</text>
 </svg>

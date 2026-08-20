@@ -64,11 +64,13 @@ Public repositories where my pull requests have been merged, refreshed daily by 
 
 <!-- CONTRIBUTIONS:START -->
 
-> Contributor to **6 public repositories** through **9 merged pull requests**. Auto-generated daily · Last updated: 2026-08-19
+> Contributor to **7 public repositories** through **10 merged pull requests**. Auto-generated daily · Last updated: 2026-08-20
 
 <a href="https://github.com/NianJiuZst/openmeta-cli"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>Contributor</b> · <a href="https://github.com/NianJiuZst/openmeta-cli">Repository</a> · <a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">3 merged PRs</a> · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
 
 <a href="https://github.com/mohitkumhar/business-ai-agent"><img src="assets/repos/mohitkumhar-business-ai-agent.svg" alt="mohitkumhar/business-ai-agent" /></a> <sub><b>Contributor</b> · <a href="https://github.com/mohitkumhar/business-ai-agent">Repository</a> · <a href="https://github.com/mohitkumhar/business-ai-agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">2 merged PRs</a> · latest: <a href="https://github.com/mohitkumhar/business-ai-agent/pull/756">#756</a></sub>
+
+<a href="https://github.com/galaxyproject/training-material"><img src="assets/repos/galaxyproject-training-material.svg" alt="galaxyproject/training-material" /></a> <sub><b>Contributor</b> · <a href="https://github.com/galaxyproject/training-material">Repository</a> · <a href="https://github.com/galaxyproject/training-material/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/galaxyproject/training-material/pull/6955">#6955</a></sub>
 
 <a href="https://github.com/zxyasfas/paper_format_agent"><img src="assets/repos/zxyasfas-paper_format_agent.svg" alt="zxyasfas/paper_format_agent" /></a> <sub><b>Contributor</b> · <a href="https://github.com/zxyasfas/paper_format_agent">Repository</a> · <a href="https://github.com/zxyasfas/paper_format_agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/zxyasfas/paper_format_agent/pull/19">#19</a></sub>
 
