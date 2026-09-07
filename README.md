@@ -64,11 +64,13 @@ Public repositories where my pull requests have been merged, refreshed daily by 
 
 <!-- CONTRIBUTIONS:START -->
 
-> Contributor to **8 public repositories** through **11 merged pull requests**. Auto-generated daily · Last updated: 2026-09-06
+> Contributor to **9 public repositories** through **12 merged pull requests**. Auto-generated daily · Last updated: 2026-09-07
 
 <a href="https://github.com/NianJiuZst/openmeta-cli"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>Contributor</b> · <a href="https://github.com/NianJiuZst/openmeta-cli">Repository</a> · <a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">3 merged PRs</a> · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
 
 <a href="https://github.com/mohitkumhar/business-ai-agent"><img src="assets/repos/mohitkumhar-business-ai-agent.svg" alt="mohitkumhar/business-ai-agent" /></a> <sub><b>Contributor</b> · <a href="https://github.com/mohitkumhar/business-ai-agent">Repository</a> · <a href="https://github.com/mohitkumhar/business-ai-agent/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">2 merged PRs</a> · latest: <a href="https://github.com/mohitkumhar/business-ai-agent/pull/756">#756</a></sub>
+
+<a href="https://github.com/autokey/autokey"><img src="assets/repos/autokey-autokey.svg" alt="autokey/autokey" /></a> <sub><b>Contributor</b> · <a href="https://github.com/autokey/autokey">Repository</a> · <a href="https://github.com/autokey/autokey/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/autokey/autokey/pull/1165">#1165</a></sub>
 
 <a href="https://github.com/packit/packit"><img src="assets/repos/packit-packit.svg" alt="packit/packit" /></a> <sub><b>Contributor</b> · <a href="https://github.com/packit/packit">Repository</a> · <a href="https://github.com/packit/packit/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/packit/packit/pull/2752">#2752</a></sub>
 
