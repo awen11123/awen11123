@@ -64,7 +64,7 @@ Public repositories where my pull requests have been merged, refreshed daily by 
 
 <!-- CONTRIBUTIONS:START -->
 
-> Contributor to **10 public repositories** through **13 merged pull requests**. Auto-generated daily · Last updated: 2026-10-29
+> Contributor to **9 public repositories** through **12 merged pull requests**. Auto-generated daily · Last updated: 2026-10-30
 
 <a href="https://github.com/NianJiuZst/openmeta-cli"><img src="assets/repos/NianJiuZst-openmeta-cli.svg" alt="NianJiuZst/openmeta-cli" /></a> <sub><b>Contributor</b> · <a href="https://github.com/NianJiuZst/openmeta-cli">Repository</a> · <a href="https://github.com/NianJiuZst/openmeta-cli/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">3 merged PRs</a> · latest: <a href="https://github.com/NianJiuZst/openmeta-cli/pull/51">#51</a></sub>
 
@@ -81,8 +81,6 @@ Public repositories where my pull requests have been merged, refreshed daily by 
 <a href="https://github.com/Vexa-ai/vexa"><img src="assets/repos/Vexa-ai-vexa.svg" alt="Vexa-ai/vexa" /></a> <sub><b>Contributor</b> · <a href="https://github.com/Vexa-ai/vexa">Repository</a> · <a href="https://github.com/Vexa-ai/vexa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/Vexa-ai/vexa/pull/460">#460</a></sub>
 
 <a href="https://github.com/ray-project/ray"><img src="assets/repos/ray-project-ray.svg" alt="ray-project/ray" /></a> <sub><b>Contributor</b> · <a href="https://github.com/ray-project/ray">Repository</a> · <a href="https://github.com/ray-project/ray/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/ray-project/ray/pull/63872">#63872</a></sub>
-
-<a href="https://github.com/Zbl1007/Creapiece"><img src="assets/repos/Zbl1007-Creapiece.svg" alt="Zbl1007/Creapiece" /></a> <sub><b>Contributor</b> · <a href="https://github.com/Zbl1007/Creapiece">Repository</a> · <a href="https://github.com/Zbl1007/Creapiece/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/Zbl1007/Creapiece/pull/2">#2</a></sub>
 
 <a href="https://github.com/mohitkumhar/450-dsa"><img src="assets/repos/mohitkumhar-450-dsa.svg" alt="mohitkumhar/450-dsa" /></a> <sub><b>Contributor</b> · <a href="https://github.com/mohitkumhar/450-dsa">Repository</a> · <a href="https://github.com/mohitkumhar/450-dsa/pulls?q=is%3Apr+author%3Aawen11123+is%3Amerged">1 merged PR</a> · latest: <a href="https://github.com/mohitkumhar/450-dsa/pull/731">#731</a></sub>
 
